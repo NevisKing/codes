@@ -2,8 +2,8 @@ import Pocketbase from 'pocketbase';
 import * as bcrypt from 'bcrypt';
 import {fail} from '@sveltejs/kit';
 import nodemailer from 'nodemailer';
-import serverEmail from '$env/static/private'
-import serverEmailPass from '$env/static/private'
+import {serverEmail} from '$env/static/private'
+import {serverEmailPass} from '$env/static/private'
 import {getDBclient} from "$lib/server/db";
 
 

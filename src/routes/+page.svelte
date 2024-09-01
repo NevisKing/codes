@@ -6,7 +6,7 @@ export let data;
 
 
 <p>
-Hello world type beat.
+    I figure I should probably put something here so Hello!
 </p>
 
 <style>

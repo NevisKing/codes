@@ -1,8 +1,8 @@
 import * as bcrypt from 'bcrypt';
 import nodemailer from 'nodemailer';
 import {getDBclient} from "$lib/server/db";
-import serverEmail from '$env/static/private';
-import serverEmailPass from '$env/static/private'
+import {serverEmail} from '$env/static/private';
+import {serverEmailPass} from '$env/static/private'
 
 const transporter = nodemailer.createTransport({
     host: "smtp.ziggo.nl",
