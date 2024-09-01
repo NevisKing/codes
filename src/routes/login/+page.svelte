@@ -1,4 +1,8 @@
 <script lang="ts">
+	import {onMount} from "svelte";
+	onMount(function(){invalidateAll();});
+import {invalidateAll} from "$app/navigation";
+
 export let data;
 export let form;
 
@@ -16,7 +20,7 @@ export let form;
 		Password
 		<input name="password" type="password">
 	</label>
-	<button>Log in</button>
+	<button on:click={() => {invalidateAll()}}>Log in</button>
 	<button formaction="?/register">Register</button>
 	<button formaction="?/logout">Log out</button>
 </form>
@@ -24,3 +28,9 @@ export let form;
 <a href='/login/forgot'>Forgot password</a>
 <style>
 </style>
+
+{#if !data.user}You aren't logged in{/if}
+{#await data}
+	{:then}
+	{#if data.user}Hi {data.user_email}{/if}
+{/await}

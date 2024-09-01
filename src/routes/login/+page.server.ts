@@ -3,7 +3,12 @@ import nodemailer from 'nodemailer';
 import {getDBclient} from "$lib/server/db";
 import {serverEmail} from '$env/static/private';
 import {serverEmailPass} from '$env/static/private'
+import {invalidateAll} from "$app/navigation";
 
+export async function load({parent}) {
+    await parent();
+
+}
 const transporter = nodemailer.createTransport({
     host: "smtp.ziggo.nl",
     port: 587,
