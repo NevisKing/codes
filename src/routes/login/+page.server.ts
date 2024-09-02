@@ -43,6 +43,10 @@ export const actions = {
             const email = form_email.toString();
             const pass = form_pass.toString();
 
+            if (email.length > 50 || pass.length > 50){
+                return {success: false, reason: "Invalid credentials"};
+            }
+
             let account = null;
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email === form_email) {
@@ -83,6 +87,9 @@ export const actions = {
             const email = form_email.toString();
             const pass = form_pass.toString();
 
+            if (email.length > 50 || pass.length > 50){
+                return {success: false, reason: "Relax sneaky h4x0r"};
+            }
             let unused = true;
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email === form_email) {
