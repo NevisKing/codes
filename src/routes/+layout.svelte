@@ -54,7 +54,7 @@ export let data;
 	}
 	.nav-container{
 		max-width: 70%;
-		width: 50%;
+		width: 70%;
 		background: #fff5ce;
 		padding: 0;
 	}
@@ -67,8 +67,8 @@ export let data;
 		justify-content: space-evenly;
 	}
 	li{
-		min-width: 5rem;
-		max-width: 20%;
+		min-width: 25%;
+		max-width: 100%;
 		flex-grow: 1;
 		//border: solid #424040;
 		background: #e4d4b1;

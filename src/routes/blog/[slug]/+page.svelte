@@ -55,4 +55,7 @@
         padding: var(--size-2) var(--size-3);
         border-radius: var(--radius-round);
     }
+    .prose {
+        width: 100%;
+    }
 </style>

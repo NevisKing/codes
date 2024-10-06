@@ -7,5 +7,5 @@ categories:
 published: true
 ---
 # Ok so now there is a post
+<img src="/dog.png" style="width:100%">
 thats cool
-![Svelte](/dog.png)
